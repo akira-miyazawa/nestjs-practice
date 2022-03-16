@@ -58,16 +58,36 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## DB
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+# dockerの起動(http://localhost:81)
+$ docker-compose up -d
+```
 
-## Stay in touch
+### pgAdmin にアクセス
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```bash
+Email Address: nestjs@example.com
+Password: password
+```
 
-## License
+- Severs > Register > Server 　で下記の設定を行う
 
-Nest is [MIT licensed](LICENSE).
+<img src="./img/setting-1.png" width="250" />
+<img src="./img/setting-1.png" width="250" />
+
+### ORM
+
+```bash
+# マイグレーションファイル作成
+$ npx typeorm migration:generate -n {作成したいファイル}
+
+# 再度実行(/dist/migrationsにjsファイルがコンパイルされているか確認)
+$ npm run start:dev
+
+# マイグレーションを実行
+$ npx typeorm migration:run
+```
+
+- pgAdmin で Schemas > Tables > item があることが確認できる
