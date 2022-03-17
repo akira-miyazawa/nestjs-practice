@@ -75,7 +75,7 @@ Password: password
 - Severs > Register > Server 　で下記の設定を行う
 
 <img src="./img/setting-1.png" width="250" />
-<img src="./img/setting-1.png" width="250" />
+<img src="./img/setting-2.png" width="250" />
 
 ### ORM
 
